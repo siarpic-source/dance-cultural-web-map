@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dance as a Living Cultural Experience</title>
+<style>
+:root{
+ --bg:#f5efe3;--ink:#28251f;--gold:#b18a4a;--green:#405846;
+ --terracotta:#9b5d4b;--indigo:#4e536d;--line:rgba(64,88,70,.48);
+}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);
+font-family:Arial,sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;
+background:repeating-linear-gradient(45deg,transparent 0 18px,#806b4b 19px 20px,transparent 21px 38px)}
+header{text-align:center;padding:46px 20px 12px}
+.eyebrow{font-size:11px;letter-spacing:.3em;color:var(--gold);font-weight:bold}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(30px,5vw,58px);margin:12px 0 8px}
+.subtitle{max-width:760px;margin:auto;line-height:1.65;color:#625c50;font-size:15px}
+.map{width:min(1120px,96vw);height:720px;margin:5px auto 10px;position:relative;display:block}
+svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.connection{fill:none;stroke:var(--line);stroke-width:2.4;stroke-linecap:round;
+transition:.25s;stroke-dasharray:8 8;animation:move 8s linear infinite}
+.connection.direct{stroke:rgba(177,138,74,.88);stroke-width:3.2}
+.connection.dim{opacity:.08}.connection.active{opacity:1;stroke-width:4}
+@keyframes move{to{stroke-dashoffset:-128}}
+.node{position:absolute;z-index:3;transform:translate(-50%,-50%);border-radius:50%;
+width:145px;height:145px;padding:14px;border:2px solid rgba(255,255,255,.75);
+background:#f9f4e9;box-shadow:0 10px 28px rgba(50,40,25,.13);
+display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer;
+transition:.3s ease}
+.node:hover{transform:translate(-50%,-50%) scale(1.07)}
+.node.active{box-shadow:0 0 0 5px rgba(177,138,74,.25),0 15px 35px rgba(50,40,25,.2)}
+.node span{font-size:11px;font-weight:800;letter-spacing:.1em;line-height:1.35}
+.center{
+ position:absolute!important;
+ left:50%!important;
+ top:50%!important;
+ transform:translate(-50%,-50%)!important;
+}
+.center:hover,.center.active{
+ transform:translate(-50%,-50%) scale(1.07)!important;
+}
+.center{width:220px;height:220px;left:50%!important;top:50%!important;background:#a98750;color:white;border:8px solid #efe5d2;
+box-shadow:0 0 0 2px rgba(177,138,74,.65),0 20px 55px rgba(65,50,25,.27)}
+.center span{font-family:Georgia,serif;font-size:28px;letter-spacing:.12em}
+.green{background:#405846;color:#fff}.blue{background:#4e536d;color:#fff}
+.brown{background:#815d3d;color:#fff}.red{background:#9b5d4b;color:#fff}
+.clay{background:#a66b59;color:#fff}.olive{background:#586947;color:#fff}
+.gold{background:#8c6a36;color:#fff}
+.info{width:min(820px,90vw);margin:0 auto 45px;padding:23px 27px;border:1px solid rgba(64,88,70,.2);
+border-radius:18px;background:rgba(255,252,244,.82);box-shadow:0 8px 28px rgba(60,50,35,.08)}
+.info h2{font:500 24px Georgia,serif;color:var(--green);margin:0 0 7px}
+.info p{margin:0;color:#625c50;line-height:1.65}.hint{text-align:center;color:#817767;
+font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:22px}
+@media(max-width:760px){
+ .map{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:15px}
+ svg{display:none}.node,.center{position:relative;left:auto!important;top:auto!important;transform:none;margin:auto}
+ .node:hover{transform:scale(1.05)}.center{grid-column:1/-1;grid-row:1;width:170px;height:170px;left:auto!important;top:auto!important;transform:none!important}
+ .n1{grid-column:1;grid-row:2}.n2{grid-column:2;grid-row:2}.n3{grid-column:1;grid-row:3}
+ .n4{grid-column:2;grid-row:3}.n5{grid-column:1;grid-row:4}.n6{grid-column:2;grid-row:4}
+ .n7{grid-column:1;grid-row:5}.n8{grid-column:2;grid-row:5}.n9{grid-column:1/-1;grid-row:6}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="eyebrow">INTERACTIVE CONCEPTUAL WEB MAP</div>
+<h1>DANCE AS A LIVING CULTURAL EXPERIENCE</h1>
+<p class="subtitle">Traditional dance is not merely physical movement or artistic performance, but a living cultural practice connecting identity, communication, heritage, wellness, emotion, spirituality, and human relationships.</p>
+</header>
+
+<section class="map">
+<svg viewBox="0 0 1120 720" preserveAspectRatio="none">
+<!-- Every major concept has a literal line directly connected to DANCE -->
+<path class="connection direct" data-a="dance" data-b="preserve" d="M560 360 C560 260 560 145 560 85"/>
+<path class="connection direct" data-a="dance" data-b="communication" d="M475 315 C390 260 285 215 185 190"/>
+<path class="connection direct" data-a="dance" data-b="identity" d="M645 315 C730 260 835 215 935 190"/>
+<path class="connection direct" data-a="dance" data-b="art" d="M455 385 C360 390 275 390 185 390"/>
+<path class="connection direct" data-a="dance" data-b="physical" d="M475 430 C390 470 285 510 185 525"/>
+<path class="connection direct" data-a="dance" data-b="social" d="M645 430 C730 470 835 510 935 525"/>
+<path class="connection direct" data-a="dance" data-b="emotion" d="M505 475 C445 535 355 600 270 625"/>
+<path class="connection direct" data-a="dance" data-b="inter" d="M615 475 C675 535 765 600 850 625"/>
+<path class="connection direct" data-a="dance" data-b="spirit" d="M560 465 C560 540 560 625 560 685"/>
+
+<!-- Secondary web: concepts also connect with each other -->
+<path class="connection" data-a="preserve" data-b="communication" d="M490 85 C390 100 285 135 185 190"/>
+<path class="connection" data-a="preserve" data-b="identity" d="M630 85 C730 100 835 135 935 190"/>
+<path class="connection" data-a="communication" data-b="art" d="M185 190 C180 255 180 325 185 390"/>
+<path class="connection" data-a="identity" data-b="art" d="M935 190 C800 230 600 325 185 390"/>
+<path class="connection" data-a="physical" data-b="emotion" d="M185 525 C200 570 235 600 270 625"/>
+<path class="connection" data-a="social" data-b="inter" d="M935 525 C920 570 885 600 850 625"/>
+<path class="connection" data-a="emotion" data-b="spirit" d="M270 625 C360 680 455 690 560 685"/>
+<path class="connection" data-a="inter" data-b="spirit" d="M850 625 C760 680 665 690 560 685"/>
+</svg>
+
+<button class="node center active" data-key="dance" data-title="DANCE" data-text="The living center from which cultural, expressive, embodied, social, emotional, relational, and spiritual dimensions emerge."><span>DANCE</span></button>
+
+<button class="node n1 green" style="left:50%;top:12%" data-key="preserve" data-title="CULTURAL PRESERVATION" data-text="Dance preserves traditions, collective memory, ancestral practices, and cultural heritage across generations."><span>CULTURAL<br>PRESERVATION</span></button>
+
+<button class="node n2 blue" style="left:16.5%;top:27%" data-key="communication" data-title="COMMUNICATION" data-text="Dance communicates stories, emotions, meanings, values, and experiences through bodily movement."><span>COMMUNICATION</span></button>
+
+<button class="node n3 gold" style="left:83.5%;top:27%" data-key="identity" data-title="IDENTITY" data-text="Dance connects people to culture, ancestry, community, and place, contributing to individual and collective identity."><span>IDENTITY</span></button>
+
+<button class="node n4 clay" style="left:16.5%;top:54%" data-key="art" data-title="ARTISTIC EXPRESSION" data-text="Movement becomes an artistic language through rhythm, gesture, form, symbolism, and creativity."><span>ARTISTIC<br>EXPRESSION</span></button>
+
+<button class="node green" style="left:16.5%;top:73%" data-key="physical" data-title="PHYSICAL WELLNESS" data-text="Dance engages the body through movement, coordination, balance, strength, flexibility, and physical vitality."><span>PHYSICAL<br>WELLNESS</span></button>
+
+<button class="node brown" style="left:83.5%;top:73%" data-key="social" data-title="SOCIAL CONNECTION" data-text="Dance creates interaction, participation, cooperation, belonging, and shared cultural experience."><span>SOCIAL<br>CONNECTION</span></button>
+
+<button class="node red" style="left:24%;top:87%" data-key="emotion" data-title="EMOTIONAL HEALING" data-text="Dance can provide an avenue for emotional expression, release, regulation, connection, and restoration."><span>EMOTIONAL<br>HEALING</span></button>
+
+<button class="node blue" style="left:76%;top:87%" data-key="inter" data-title="INTERCORPOREALITY" data-text="Dance demonstrates how bodies experience, respond to, and communicate with other bodies through shared movement and presence."><span>INTERCORPOREALITY</span></button>
+
+<button class="node olive" style="left:50%;top:96%" data-key="spirit" data-title="SPIRITUAL EXPERIENCE" data-text="Dance can become a medium for ritual, transcendence, devotion, connection with the sacred, and experiences beyond the individual self."><span>SPIRITUAL<br>EXPERIENCE</span></button>
+</section>
+
+<div class="hint">CLICK ANY CIRCLE — ITS CONNECTIONS WILL LIGHT UP</div>
+<section class="info" id="info"><h2>DANCE</h2><p>The living center from which cultural, expressive, embodied, social, emotional, relational, and spiritual dimensions emerge.</p></section>
+
+<script>
+const nodes=[...document.querySelectorAll('.node')], lines=[...document.querySelectorAll('.connection')];
+const title=document.querySelector('#info h2'), text=document.querySelector('#info p');
+function activate(key){
+ nodes.forEach(n=>n.classList.toggle('active',n.dataset.key===key));
+ lines.forEach(l=>{
+   const hit=l.dataset.a===key||l.dataset.b===key;
+   l.classList.toggle('active',hit); l.classList.toggle('dim',!hit);
+ });
+ const n=nodes.find(x=>x.dataset.key===key);
+ title.textContent=n.dataset.title; text.textContent=n.dataset.text;
+}
+nodes.forEach(n=>n.addEventListener('click',()=>activate(n.dataset.key)));
+activate('dance');
+</script>
+</body>
+</html>
